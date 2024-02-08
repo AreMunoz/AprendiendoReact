@@ -1,12 +1,17 @@
 import React, {useState} from 'react'
 
-export default function Component() {
+// Esto convierte a la función en una función impura
+/* let datosUsuario = {
+  nombre: "Pepe",
+  apellido: "Perez",
+  edad: 25
+} */
 
+export default function Component(props) {
     //propiedades
     const [text, setText] = useState()
     const [updated, setUpdated] = useState()
     
-
     const textOnChange = (event) => {
         setText(event.target.value)
     }
@@ -15,14 +20,30 @@ export default function Component() {
         setUpdated(text)
     }
 
-
   return (
     <div>
         <input type="text" value={text} onChange={textOnChange} name="" id="" />
         <button onClick={buttonOnClick}>Actualizar</button>
         <p>texto input: {text}</p>
         <p>texto actualizado: {updated}</p>
-
+        {/* props = {
+          nombre: "Pepe",
+        } */}
+        <Usuario nombre={updated} />
     </div>
   )
 }
+
+function Usuario(props) {
+  return (
+    <div>
+      <p>Nombre: {props.nombre}</p>
+    </div>
+  )
+}
+
+// Una función pura es una función que para un mismo input siempre devuelve el mismo output
+// f(x) = 5 + x
+
+// Una función impura es una función que para un mismo input puede devolver distintos outputs
+// f(x) = 5 + x + Math.random() * 10
