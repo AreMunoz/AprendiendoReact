@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Component from './Component';
 import Product from './Product/Product';
+import Signup from './Signup/Signup';
 
 function App() {
   function handlePuchame() {
@@ -18,6 +19,7 @@ function App() {
         <BotonSencillo label={"Puchfdafdadsfame"} onClick={handlePuchame} /> */}
       </header>
       <main>
+        <Signup />
         <Product />
       </main>
     </div>
