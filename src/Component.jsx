@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 // Esto convierte a la función en una función impura
 /* let datosUsuario = {
@@ -6,6 +6,8 @@ import React, {useState} from 'react'
   apellido: "Perez",
   edad: 25
 } */
+
+// Servicio REST: https://dummyjson.com/products/1
 
 export default function Component(props) {
     //propiedades
@@ -19,6 +21,14 @@ export default function Component(props) {
     const buttonOnClick = () => {
         setUpdated(text)
     }
+
+    useEffect(() => {
+        console.log("Componente montado")
+
+        return () => {
+            console.log("Componente desmontado")
+        }
+    }, []);
 
   return (
     <div>
