@@ -12,15 +12,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Product />
-        <Component>
-          {/* 
-            El contenido entre etiquetas de apertura y cierre de un componente se pasa como props.children
-           */}
+{/*         <Component>
           <p>Texto de prueba</p>
         </Component>
-        <BotonSencillo label={"Puchfdafdadsfame"} onClick={handlePuchame} />
+        <BotonSencillo label={"Puchfdafdadsfame"} onClick={handlePuchame} /> */}
       </header>
+      <main>
+        <Product />
+      </main>
     </div>
   );
 }
