@@ -43,27 +43,28 @@ const Product = () => {
       .catch(error => console.log(error))
   }
 
+
+
   return (
     <div className="container">
       <h1>Product</h1>
-      <div className="foto">
-        <div className="main-container">
-            <div className="poster-container"></div>
-              <a href="#">
-                {productDetails?.images.map((image, index) => (
-                  <img class="poster"  src={image} alt="Product" key={index}></img>
-                ))}
-                {/* <img src={productDetails?.images[3]}/> */}
-              </a>
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src={productDetails?.thumbnail} alt="Product thumbnail" class="poster" /></a>
         </div>
+        <div class="ticket-container">
+          <div class="ticket_content">
+            <h4 class="articulo">Articulo: {productDetails?.title}</h4>
+            <p class="category">
+              Categoria: {productDetails?.category}
+            </p>
+            <p class="description">Marca: {productDetails?.brand}</p>
+
+            <button class="ticket-btn">Buy now</button>
+          </div>
+        </div>
+
       </div>
-      <img src={productDetails?.thumbnail} alt="Product thumbnail"></img>
-      <p>Articulo: {productDetails?.title}</p>
-      <p>Marca: {productDetails?.brand}</p>
-      <p>Categoria: {productDetails?.category}</p>
-
-
-
 
 
     </div>

@@ -1,4 +1,5 @@
-import { useForm } from "react-hook-form"
+import React from 'react';
+import { useForm } from "react-hook-form";
 import './Signup.css';
 
 // https://7rdhmq5l-8080.usw3.devtunnels.ms/signup
