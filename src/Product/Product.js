@@ -58,7 +58,9 @@ const Product = () => {
             <p class="category">
               Categoria: {productDetails?.category}
             </p>
+
             <p class="description">Marca: {productDetails?.brand}</p>
+            <p className="category">{productDetails?.description}</p>
 
             <button class="ticket-btn">Buy now</button>
           </div>
