@@ -5,6 +5,7 @@ import Product from "./Product/Product.tsx";
 import Signup from "./Signup/Signup.tsx";
 import React from "react";
 import Products from "./Products/Products.tsx";
+import Counter from "./Counter/Counter.tsx";
 
 function App() {
   function handlePuchame() {
@@ -18,7 +19,8 @@ function App() {
         </Component>
         <BotonSencillo label={"Puchfdafdadsfame"} onClick={handlePuchame} /> */}
       <main>
-        <Signup />
+        {/* <Signup /> */}
+        <Counter />
         <Products />
       </main>
     </div>

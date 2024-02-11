@@ -3,8 +3,15 @@ import "./Product.css";
 import React from "react";
 import { ProductDetails } from "../../types";
 
+/* 
+  Typescript es un superset de javascript, es decir, es javascript con superpoderes.
+  Los superpoderes de typescript son los tipos de datos.
+  En este caso, estamos definiendo el tipo de dato que va a recibir el componente Product.
+  El tipo de dato que va a recibir es un objeto con las propiedades definidas en ProductDetails.
+ */
 type ProductProps = {
   data: ProductDetails;
+  onClick: (id: number) => void;
 };
 
 /* 
@@ -13,7 +20,11 @@ type ProductProps = {
   };
  */
 
-const Product = ({ data }: ProductProps) => {
+/**
+ * Componente que muestra un producto a partir de las propiedades que recibe.
+ */
+const Product = ({ data, onClick }: ProductProps) => {
+
   return (
     <div className="container">
       <h1>Product</h1>
@@ -35,7 +46,7 @@ const Product = ({ data }: ProductProps) => {
             <p className="description">Marca: {data.brand}</p>
             <p className="category">{data.description}</p>
 
-            <button className="ticket-btn">Buy now</button>
+            <button onClick={() => onClick(data.id)} className="ticket-btn">Buy now</button>
           </div>
         </div>
       </div>
